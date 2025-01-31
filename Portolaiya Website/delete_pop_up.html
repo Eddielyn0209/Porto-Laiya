@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porto Laiya Admin</title>
+    <link rel="stylesheet" href="delete_pop_up.css">
+    <script src="https://cdn.builder.io/js/webcomponents"></script>
+</head>
+<body>
+    <builder-component model="page" api-key="265db7ad"></builder-component>
+
+    <main class="body-container" role="main">
+        <section class="delete_pop-section">
+            <div class="delete-confirmation-container">
+                <div class="delete-confirmation-popup" role="dialog" aria-labelledby="dialog-title" aria-modal="true">
+                  <div class="window-controls" role="group" aria-label="Window controls">
+                    <button class="control-btn minimize" aria-label="Minimize window">−</button>
+                    <button class="control-btn maximize" aria-label="Maximize window">□</button>
+                    <button onclick="window.location.href='transaction_pop_up.html';"class="control-btn close" aria-label="Close window">×</button>
+                  </div>
+                  <h2 id="dialog-title" class="confirmation-message">
+                    Are you sure you want to delete this record?
+                  </h2>
+                  
+                  <div class="action-buttons">
+                    <button onclick="window.location.href='transaction_pop_up.html';"class="cancel-button" type="button">
+                      CANCEL
+                    </button>
+                    <button class="delete-button" type="button">
+                      DELETE
+                    </button>
+                  </div>
+                </div>
+              </div>
+        <script src="admin.js"></script>
+</body>
+</html>

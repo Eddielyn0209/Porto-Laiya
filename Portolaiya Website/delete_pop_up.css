@@ -1,0 +1,234 @@
+:root {
+    --primary-color: #365486;
+    --secondary-color: #7895B2;
+    --background-color: #FFFFFF;
+    --text-color: #333333;
+    --border-color: #E0E0E0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --success-color: #4CAF50;
+    --danger-color: #F44336;
+    --focus-color: #2196F3;
+    --header-height: 80px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-padding-top: var(--header-height);
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #F5F5F5;
+    padding-top: var(--header-height);
+  }
+  
+  .main-header {
+    background-color: var(--primary-color);
+    height: var(--header-height);
+    padding: 0 2rem;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+
+  .delete-confirmation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .delete-confirmation-popup {
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    width: 500px;
+    max-width: 90%;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    padding: 28px 40px 40px;
+    font: 400 24px Inter, sans-serif;
+    border: 1px solid #133774;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .window-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    z-index: 100;
+  }
+  
+  .control-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    color: black;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+  
+  .control-btn:hover {
+    opacity: 0.8;
+  }
+  
+  .minimize {
+    background-color: #FFFFFF;
+  }
+  
+  .maximize {
+    background-color: #FFFFFF;
+  }
+  
+  .close {
+    background-color: #FFFFFF;
+  }
+
+  .close-icon {
+    aspect-ratio: 4.39;
+    object-fit: contain;
+    object-position: center;
+    width: 100px;
+    align-self: end;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  
+  .confirmation-message {
+    color: #000;
+    text-align: center;
+    margin: 40px 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  
+  .action-buttons {
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cancel-button,
+  .delete-button {
+    border-radius: 20px;
+    padding: 12px 38px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    font: inherit;
+    font-size: 16px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    min-width: 120px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .cancel-button {
+    background-color: #365486;
+  }
+  
+  .cancel-button:hover,
+  .cancel-button:focus {
+    background-color: #2a4268;
+    outline: none;
+  }
+  
+  .delete-button {
+    background-color: #b22626;
+  }
+  
+  .delete-button:hover,
+  .delete-button:focus {
+    background-color: #8e1e1e;
+    outline: none;
+  }
+  
+  .cancel-button:active,
+  .delete-button:active {
+    transform: scale(0.98);
+  }
+  
+  .delete-button:focus-visible,
+  .cancel-button:focus-visible {
+    outline: 2px solid #4A90E2;
+    outline-offset: 2px;
+  }
+  
+  @media (max-width: 991px) {
+    .delete-confirmation-popup {
+      padding: 20px;
+      margin: 10px;
+      font-size: 18px;
+    }
+  
+    .confirmation-message {
+      font-size: 18px;
+      margin: 30px 0;
+    }
+  
+    .action-buttons {
+      flex-direction: column;
+      width: 100%;
+      gap: 15px;
+    }
+  
+    .cancel-button,
+    .delete-button {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .cancel-button,
+    .delete-button,
+    .window-control {
+      transition: none;
+    }
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }

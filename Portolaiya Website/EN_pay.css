@@ -1,0 +1,258 @@
+body {
+    font-family: roboto, open sans;
+    margin: 0;
+    height: 250vh;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: first baseline;
+    margin-left: 85px;
+    left: 100px;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.env-fees-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the element */
+    padding: 2rem;
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px; /* Prevent it from being too wide */
+}
+
+.white-background {
+    background: #E1F3F2;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centers text inside */
+}
+
+  
+  .header-bar {
+    margin-bottom: 2rem;
+  }
+  
+  .title-controls-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .window-controls {
+    position: absolute;
+    top: 10px;
+    left: 700px;
+    display: flex;
+    gap: 8px;
+    z-index: 100;
+  }
+  
+  .control-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    color: black;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+  
+  .control-btn:hover {
+    opacity: 0.8;
+  }
+  
+  .minimize {
+    background-color: #FFFFFF;
+  }
+  
+  .maximize {
+    background-color: #FFFFFF;
+  }
+  
+  .close {
+    background-color: #FFFFFF;
+  }
+
+
+
+.section-title {
+    font-family: Katibeh, sans-serif;
+    font-size: 2.25rem;
+    color: #000;
+    background: white;
+    margin: 0;
+    flex-grow: 1;
+    text-align: left;
+}
+  
+  .white-background {
+    background: #FFF;
+    border-radius: 2px;
+    width: 140%;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  
+  .table-header {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 1rem;
+    border-bottom: 2px solid #E0E0E0;
+    margin-bottom: 1rem;
+  }
+  
+  .header-cell {
+    font-family: Katibeh, sans-serif;
+    font-size: 1.5rem;
+    color: #000;
+    text-align: left;
+  }
+  
+  .table-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+  
+  .customer-row {
+    display: grid;
+    grid-template-columns: auto 3fr 1fr;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #E0E0E0;
+  }
+  
+  .checkbox-cell {
+    padding: 0 1rem;
+  }
+  
+  .custom-checkbox {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .customer-info-cell {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .profile-image {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .customer-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .customer-name {
+    font-family: Karma, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #000;
+  }
+  
+  .customer-info-text {
+    font-family: Karma, sans-serif;
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.4;
+  }
+  
+  .status-cell {
+    font-family: Karma, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .pending, .not-paid {
+    color: #D80E0E;
+  }
+  
+  .pay-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem 2rem;
+    font-family: Karma, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .pay-button:hover {
+    background-color: #45a049;
+  }
+  
+  .pay-button:focus {
+    outline: 2px solid #2d662f;
+    outline-offset: 2px;
+  }
+  
+  @media (max-width: 768px) {
+    .customer-row {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    .customer-info-cell {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .status-cell {
+      text-align: center;
+    }
+    
+    .header-cell:last-child {
+      text-align: center;
+    }
+    
+    .pay-button {
+      position: static;
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .env-fees-container {
+      padding: 0 1rem 1rem;
+    }
+    
+    .section-title {
+      font-size: 1.75rem;
+    }
+    
+    .customer-name {
+      font-size: 1rem;
+    }
+    
+    .customer-info-text {
+      font-size: 0.75rem;
+    }
+  }
